@@ -1,6 +1,9 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask_cors import CORS
 import pandas as pd
+import io
+import base64
+import matplotlib.pyplot as plt
 import io
 app = Flask(__name__)
 app.debug = True
@@ -23,6 +26,35 @@ def upload():
 
     return {'message': 'File data received and processed successfully'}
 
+
+@app.route('/api/plot')
+def generate_plot():
+    fig1, ax1 = plt.subplots()
+    ax1.plot([1, 2, 3, 4], [1, 4, 2, 3])
+    ax1.set_title('Graph 1')
+# ... plot your data on ax1 ...
+# Save the image to a BytesIO object
+    image_data1 = io.BytesIO()
+    plt.savefig(image_data1, format='png')
+    plt.close(fig1)
+# Convert the image data to base64 string
+    image_base64_1 = base64.b64encode(image_data1.getvalue()).decode('utf-8')
+
+# Generate the second image
+    fig2, ax2 = plt.subplots()
+    ax2.plot([1, 2, 3, 4], [1, 2, 3, 4])
+    ax2.set_title('Graph 2')
+# ... plot your data on ax2 ...
+    image_data2 = io.BytesIO()
+    plt.savefig(image_data2, format='png')
+    plt.close(fig2)
+    image_base64_2 = base64.b64encode(image_data2.getvalue()).decode('utf-8')
+
+# Return the base64 strings as a JSON response
+    return {
+    'image1': image_base64_1,
+    'image2': image_base64_2,
+    }
 
 
 if __name__ == '__main__':
