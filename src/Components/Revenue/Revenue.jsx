@@ -93,7 +93,7 @@ const Revenue = () => {
 
           if (response) {
             console.log(response);
-            navigate("/dashboard");
+            navigate("/generatepdf");
           }
 
           // console.log('File uploaded successfully!', response.data);
@@ -119,7 +119,7 @@ const Revenue = () => {
 
           if (response) {
             console.log(response.data);
-            navigate("/dashboard");
+            navigate("/generatepdf");
           }
 
           // console.log('File uploaded successfully!', response.data);

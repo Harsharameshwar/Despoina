@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Document, Page, View, Text, StyleSheet } from "@react-pdf/renderer";
 import Plot from "react-plotly.js";
 import html2pdf from "html2pdf.js";
+import { Button } from "baseui/button";
 
 
 const data = [
@@ -132,19 +133,21 @@ const ReportPage = () => {
       <div ref={pdfRef}>
         <MachineLearningReport />
       </div>
-      <div className="mt-8 mb-4">
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+      <div className="mt-8 mb-4 ">
+        <Button
+        //   className="mr-4"
+        className="text-white font-bold py-2 px-4 rounded"
+        style={{marginRight:"2%"}}
           onClick={generatePDF}
         >
           View PDF
-        </button>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        </Button>
+        <Button
+          className="text-white font-bold py-2 px-4 rounded"
           onClick={downloadPDF}
         >
           Download PDF
-        </button>
+        </Button>
       </div>
     </div>
   );

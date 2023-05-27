@@ -12,7 +12,6 @@ import Contact from "./Components/Contact.jsx";
 import FooterPage from "./Components/Footer.jsx";
 import LoginPage from "./Components/LoginPage.jsx";
 import SignupPage from "./Components/SignupPage.jsx";
-// import CsvUploader from "./Components/CsvUploader.jsx";
 import DashboardPage from "./Components/DashboardPage.jsx";
 import Settings from "./Components/Settings.jsx";
 import { RequireAuth, useAuthUser } from "react-auth-kit";
@@ -48,7 +47,7 @@ function App() {
           <Route exact path="/signup" element={<SignupPage />} />
           <Route
             exact
-            path="/upload"
+            path="/generatepdf"
             element={
               <RequireAuth loginPath={"/"}>
                 <MachineLearningReport/>
