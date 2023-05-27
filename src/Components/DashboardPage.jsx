@@ -14,10 +14,10 @@ const DashboardPage = () => {
           <h2 className="text-xl font-bold mb-4">Consumption</h2>
           <p className="text-gray-600">View and analyze data</p>
         </Link>
-        {/* <Link to="/customer" className="bg-white p-6 rounded-lg shadow-md">
+        <Link to="/customer" className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-4">Customer</h2>
           <p className="text-gray-600">View and analyze data</p>
-        </Link> */}
+        </Link>
         <Link to="/marketing" className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-4">Marketing</h2>
           <p className="text-gray-600">View and analyze data</p>
@@ -30,18 +30,19 @@ const DashboardPage = () => {
           <h2 className="text-xl font-bold mb-4">Sales</h2>
           <p className="text-gray-600">View and analyze data</p>
         </Link>
+        <Link to="/visualizesales" className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-4">Visualize Sales</h2>
+          <p className="text-gray-600">View and analyze data</p>
+        </Link>
+
         <Link to="/settings" className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-4">Account</h2>
           <p className="text-gray-600">Manage your account settings</p>
         </Link>
-        <Link to="/users" className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-bold mb-4">Users</h2>
-          <p className="text-gray-600">Manage user profiles</p>
-        </Link>
-        <Link to="/reports" className="bg-white p-6 rounded-lg shadow-md">
+        {/* <Link to="/reports" className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-4">Reports</h2>
           <p className="text-gray-600">Generate and view reports</p>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

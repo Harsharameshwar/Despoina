@@ -29,6 +29,11 @@ function Header  (){
             Upload
           </span>
         </Link> */}
+         <Link to="/customer">
+          <span className="inline-block text-white hover:text-gray-600 mr-4">
+          Customer
+          </span>
+        </Link>
         <Link to="/consumption">
           <span className="inline-block text-white hover:text-gray-600 mr-4">
           Consumption
@@ -47,6 +52,11 @@ function Header  (){
         <Link to="/sales">
           <span className="inline-block text-white hover:text-gray-600 mr-4">
           Sales
+          </span>
+        </Link>
+        <Link to="/visualizesales">
+          <span className="inline-block text-white hover:text-gray-600 mr-4">
+          Visualize Sales
           </span>
         </Link>
   
