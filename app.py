@@ -57,5 +57,15 @@ def generate_plot():
     }
 
 
+@app.route('/generate-report', methods=['POST'])
+def upload_csv():
+    file = request.files['file']  # Retrieve the uploaded file from the request
+    df = pd.read_csv(file)  # Convert the CSV file to a DataFrame
+    # Process the DataFrame
+    print(df.head())
+    # ...
+    return 'CSV uploaded and converted to DataFrame successfully'
+
+
 if __name__ == '__main__':
     app.run(port=5001)
